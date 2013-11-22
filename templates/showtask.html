@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block bodycontent %}
+<div id="mheeOneTask">
+	<div id="mheeOneTaskInner">
+		<div id="mheeDisplayBox">
+			<div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div>
+			<div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div><div id="mheeHole"></div>
+			<div id="mheeHole"></div><div id="mheeHole"></div>
+			<div id="mheeDesc">
+			<h1>Description:</h1><br/>
+			{{ task.description }}</h5>			
+			</div>
+		
+			{% if task.completed == False %}
+			<div id="mheeUnfinish"><br/>&nbsp;&nbsp;<img src="/static/image/bear1.png"></img>
+			<h3>Unfinish</h3>
+			</div>
+			{% elif task.completed == True %}
+			<div id="mheeFinish"><br/>&nbsp;&nbsp;<img src="/static/image/bear2.png"></img>
+			<h3>Finished</h3>
+			</div>			
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
